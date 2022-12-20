@@ -7,7 +7,7 @@ import { ElectricalServices } from '@mui/icons-material';
 // import CurrencyRupeeIcon from '@mui/icons-material';
 export default function Cart() {
     // const {data}=useParams()
-    const key="cartdata"
+    const key="cartdat"
     const [state, setState] = useState(JSON.parse(localStorage.getItem(key)));
     const [total,setTotal]=useState(0);
     const[persentage,setpersentage]=useState(0);

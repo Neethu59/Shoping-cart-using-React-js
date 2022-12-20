@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import {Badge} from '@mui/material';
 import { useState } from 'react';
 export default function Navbar() {
-  const key="cartdata"
+  const key="cartdat"
 
 
   const [state, setState] = useState(JSON.parse(localStorage.getItem(key)));
@@ -24,7 +24,7 @@ export default function Navbar() {
 
      <p style={{marginLeft:"5%",marginTop:"2%"}} onClick={()=>{navigate('/')}}>Home</p>
     <p style={{marginLeft:"5%",marginTop:"2%"}}>About</p>
-<input type="text" placeholder="search book by author or publisher "  id="inputtext"></input><Search id="search"/>
+<input type="text" placeholder="search product "  id="inputtext"></input><Search id="search"/>
    
   <p style={{marginLeft:"10%",marginTop:"2%"}}>FAQ</p>
  

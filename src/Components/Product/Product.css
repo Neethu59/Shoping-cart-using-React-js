@@ -7,3 +7,56 @@
 {
     display:"flex"
 }
+#alll
+{
+  margin-left: 18%; 
+  border-radius: 25px;
+  padding: 10px; 
+  
+}
+#all
+{
+    margin-left: 10%;
+    padding: 15px;
+    border-radius: 25px;
+    margin-top: 5%;
+    border: none;
+    font-size: large;
+    font-weight: bold;
+    background-color: yellow;
+}
+#view
+{
+    display: flex;
+}
+#btttn
+{
+    border-color: white;
+    
+}
+#range
+{
+    margin-left: 32%;
+    /* margin-bottom: 15%; */
+
+}
+/* #evan
+{
+    margin-bottom: 20%;
+    
+} */
+.all0:hover{
+    background-color: red;
+}
+.all1:hover{
+    background-color: red;   
+}
+.all2:hover{
+    background-color: red;   
+}
+.all3:hover{
+    background-color: red;   
+}
+.all4:hover{
+    background-color: red;   
+}

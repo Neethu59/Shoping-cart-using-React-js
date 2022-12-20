@@ -6,17 +6,36 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 export default function Product() {
-  const key="cartdata"
+  const key="cartdat"
 
     const [product,setProduct]=useState([])
+    // const[item,setItem]=useState({})
     const [cart,setCart]=useState(JSON.parse(localStorage.getItem(key))||[])
+    const[name,setname]=useState("All Catogory")
+    const[item,setItem]=useState([])
+    console.log(name);
+    const dd = (e)=>{
+    axios.get(`https://fakestoreapi.com/products/category/${e}`)
+    .then(respons=>{
+      console.log("catogory====>",respons.data)
+      setProduct(respons.data)
+      setname(e)
+    })
+   
+     
+    }
     
     useEffect(()=>{
 axios.get("https://fakestoreapi.com/products")
 .then(response=>{
     console.log(response.data)
     setProduct(response.data)
+setItem(response.data)
+   
+
 })
+
+
     },[])
 
     const navigate=useNavigate()
@@ -42,6 +61,12 @@ axios.get("https://fakestoreapi.com/products")
     <>
     <Navbar/>
     
+    {/* <button id="alll"  class="all0" onClick={item}>All</button> */}
+  <button id="all"  class="all1" onClick={()=>{ dd("men's clothing")}}>men's clothing</button>
+  <button id="all"  class="all2" onClick={()=>{ dd("jewelery")}}>jewelery</button>
+  <button id="all"  class="all3" onClick={()=>{ dd("electronics")}}>electronics</button>
+  <button id="all" class="all4" onClick={()=>{ dd("women's clothing")}}>women's clothing</button>
+  <h1 style={{marginLeft:"10%",color:"ActiveBorder"}}>{name}</h1>
   <div class="row row-cols-1 row-cols-md-3 g-4">
 
   {product.map((data)=>(
